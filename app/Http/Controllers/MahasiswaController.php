@@ -35,6 +35,8 @@ class MahasiswaController extends Controller
                 'Kelas' => 'required',
                 'Jurusan' => 'required',
                 'No_Handphone' => 'required',
+                'Email' => 'required',
+                'Tgl_lahir' => 'required',
             ]);
         
             //fungsi eloquent untuk menambah data
