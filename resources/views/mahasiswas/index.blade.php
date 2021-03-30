@@ -9,8 +9,12 @@
                 <div class="float-right my-2">
                     <a class="btn btn-success" href="{{ route('mahasiswas.create') }}"> Input Mahasiswa</a>
                 </div>
+                <form class="float-right form-inline" id="searchForm" method="get" action="{{ route('mahasiswas.index') }}" role="search">
+            <div class="form-group">
+                <input type="text" name="keyword" class="form-control" id="Keyword" aria-describedby="Keyword" placeholder="Keyword" value="{{request()->query('keyword')}}">
             </div>
-        </div>
+            <button type="submit" class="btn btn-primary mx-2">Cari</button>
+        </form>
     
     @if ($message = Session::get('success'))
         <div class="alert alert-success">
@@ -53,4 +57,5 @@
     </tr>
     @endforeach
     </table>
+
 @endsection
